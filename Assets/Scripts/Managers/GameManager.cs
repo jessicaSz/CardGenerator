@@ -1,18 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameData gameData;
+    private CardGenerator cardGenerator;
+
+    private Card currentCard;
+
+    private void Awake()
     {
-        
+        gameData = GetComponent<GameData>();
+        cardGenerator = GetComponent<CardGenerator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        GameActions.OnCardGenerate += RunCardGenerator;
     }
+
+    private void OnDisable()
+    {
+        GameActions.OnCardGenerate -= RunCardGenerator;
+    }
+
+    private void Start()
+    {
+        GameActions.OnGameStart.Invoke();
+    }
+
+    private void RunCardGenerator()
+    {
+        currentCard = cardGenerator.GenerateNewCard(gameData);
+    }
+    
 }
