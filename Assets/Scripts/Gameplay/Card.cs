@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private string title;
+    private string description;
+    private Sprite picture;
+    private CardEffect cardEffect;
 
-    // Update is called once per frame
-    void Update()
+    public Card(string title, string description, Sprite picture, CardEffect cardEffect)
     {
-        
+        this.title = title;
+        this.description = description;
+        this.picture = picture;
+        this.cardEffect = cardEffect;
     }
+    
 }
