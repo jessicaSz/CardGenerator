@@ -10,11 +10,11 @@ public class CardUI : MonoBehaviour
     
     [SerializeField] private Image cardPicture;
 
-    public void SetCardUI(string title, string description, string effectDescription, Sprite picture)
+    public void SetCardUI(string title, string description, CardEffect effect, Sprite picture)
     {
         cardTitle.text = title;
         cardDescription.text = description;
-        cardEffectDescription.text = effectDescription;
+        cardEffectDescription.text = $"{effect.EffectDescription} {effect.EffectValue}";
         cardPicture.sprite = picture;
     }
 
