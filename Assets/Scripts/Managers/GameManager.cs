@@ -26,12 +26,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        GameActions.OnGameStart.Invoke();
+        if(GameActions.OnGameStart !=null)
+            GameActions.OnGameStart();
     }
 
     private void RunCardGenerator()
     {
         currentCard = cardGenerator.GenerateNewCard(gameData);
+        GameActions.OnCardGenerated(currentCard);
     }
     
 }
