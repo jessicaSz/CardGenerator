@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     private Card currentCard;
     private PlayerData playerData;
+
+    private List<Card> generatedCards = new List<Card>();
+    public List<Card> GeneratedCards => generatedCards;
 
     private void Awake()
     {
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
     private void RunCardGenerator()
     {
         currentCard = cardGenerator.GenerateNewCard(gameData);
+        generatedCards.Add(currentCard);
         GameActions.OnCardGenerated(currentCard);
     }
 
