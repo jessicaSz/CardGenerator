@@ -14,26 +14,31 @@ public class PlayerStatsUI : MonoBehaviour
 
     public void SetHealthText(float value)
     {
-        health.text = value.ToString();
+        health.text = "HP: " + value;
     }
 
     public void SetSpeedText(float value)
     {
-        speed.text = value.ToString();
+        speed.text = "Speed: " + value;
     }
 
     public void SetStaminaText(float value)
     {
-        stamina.text = value.ToString();
+        stamina.text = "Stamina: " + value;
     }
 
     public void SetAttackText(float value)
     {
-        attack.text = value.ToString();
+        attack.text = "Attack: " + value;
     }
 
     public void SetArmorText(float value)
     {
-        armor.text = value.ToString();
+        armor.text = "Armor: " + value;
+    }
+
+    public void SetPowerText(float value)
+    {
+        power.text = "Power: " + value;
     }
 }
