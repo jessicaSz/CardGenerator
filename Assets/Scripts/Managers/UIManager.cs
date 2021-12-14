@@ -10,20 +10,28 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button saveButton;
     [SerializeField] private Button useButton;
 
+    [SerializeField] private PlayerStatsUI playerStatsUI;
+
     private CardUI cardUI;
-    private PlayerStatsUI playerStatsUI;
+
 
     private void Awake()
     {
         cardUI = GetComponentInChildren<CardUI>();
-        playerStatsUI.GetComponentsInChildren<PlayerStatsUI>();
     }
 
     private void OnEnable()
     {
-       generateButton.onClick.AddListener(GenerateCard);
-       saveButton.onClick.AddListener(SaveCards);
-       useButton.onClick.AddListener(UseCard);
+        generateButton.onClick.AddListener(GenerateCard);
+        saveButton.onClick.AddListener(SaveCards);
+        useButton.onClick.AddListener(UseCard);
+
+        GameActions.OnCardGenerated += OnCardGenerated;
+    }
+
+    private void OnCardGenerated(Card card)
+    {
+        cardUI.SetCardUI(card.Title, card.Description, card.CardEffect, card.Picture);
     }
 
     private void OnDisable()
