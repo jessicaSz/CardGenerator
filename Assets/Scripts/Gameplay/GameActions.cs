@@ -8,4 +8,5 @@ public static class GameActions
     public static Action OnCardUse;
 
     public static Action<Card> OnCardGenerated;
+    public static Action OnPlayerStatsChanged;
 }

@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
 
         GameActions.OnGameStart += OnGameStart;
         GameActions.OnCardGenerated += OnCardGenerated;
+        GameActions.OnPlayerStatsChanged += SetStatsUI;
     }
 
     private void OnGameStart(PlayerData playerData)
@@ -47,6 +48,7 @@ public class UIManager : MonoBehaviour
         
         GameActions.OnGameStart -= OnGameStart;
         GameActions.OnCardGenerated -= OnCardGenerated;
+        GameActions.OnPlayerStatsChanged -= SetStatsUI;
         
     }
 
@@ -63,6 +65,7 @@ public class UIManager : MonoBehaviour
     private void UseCard()
     {
         GameActions.OnCardUse.Invoke();
+        GameActions.OnCardGenerate.Invoke();
     }
 
     private void SetStatsUI()

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private CardGenerator cardGenerator;
 
     private Card currentCard;
+    private PlayerData playerData;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerData playerData = new PlayerData
+        playerData = new PlayerData
         {
             Health = 100,
             Speed = 100,
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
             Power = 45
         };
 
-        if(GameActions.OnGameStart !=null)
+        if (GameActions.OnGameStart != null)
             GameActions.OnGameStart(playerData);
     }
 
@@ -50,21 +51,30 @@ public class GameManager : MonoBehaviour
 
     private void UseCard()
     {
+        if (currentCard == null) return;
+        
+        var effectValue = currentCard.CardEffect.EffectValue;
         switch (currentCard.CardEffect.Type)
         {
             case CardEffect.EffectType.Health:
+                playerData.Health += effectValue;
                 break;
             case CardEffect.EffectType.Stamina:
+                playerData.Stamina += effectValue;
                 break;
             case CardEffect.EffectType.Armor:
+                playerData.Armor += effectValue;
                 break;
             case CardEffect.EffectType.Speed:
+                playerData.Speed += effectValue;
                 break;
             case CardEffect.EffectType.Attack:
+                playerData.Attack += effectValue;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+
+        GameActions.OnPlayerStatsChanged();
     }
-    
 }
