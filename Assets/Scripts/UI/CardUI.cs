@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI cardTitle;
+    [SerializeField] private TextMeshProUGUI cardDescription;
+    [SerializeField] private TextMeshProUGUI cardEffectDescription;
+    
+    [SerializeField] private Image cardPicture;
+
+    public void SetCardUI(string title, string description, string effectDescription, Sprite picture)
     {
-        
+        cardTitle.text = title;
+        cardDescription.text = description;
+        cardEffectDescription.text = effectDescription;
+        cardPicture.sprite = picture;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
