@@ -1242,7 +1242,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8546975900518795034}
   - component: {fileID: 8546975900518795035}
-  - component: {fileID: 8341772313831546803}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -1301,24 +1300,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &8341772313831546803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8546975900518795033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437277b74dcd28b45b988940cdd91a1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 8546975900741815599}
-  speed: {fileID: 8546975900452396488}
-  stamina: {fileID: 8546975899838882580}
-  attack: {fileID: 8546975899956972046}
-  armor: {fileID: 8546975900156044010}
-  power: {fileID: 8546975900016902921}
 --- !u!1 &8546975900741815597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,6 +1821,7 @@ MonoBehaviour:
   generateButton: {fileID: 8546975900510249931}
   saveButton: {fileID: 8546975900250115183}
   useButton: {fileID: 8546975900232629217}
+  playerStatsUI: {fileID: 7523210379262173216}
 --- !u!1 &8546975901194691519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +1967,7 @@ GameObject:
   - component: {fileID: 8546975901424986386}
   - component: {fileID: 8546975901424986380}
   - component: {fileID: 8546975901424986387}
+  - component: {fileID: 7523210379262173216}
   m_Layer: 5
   m_Name: PlayerStats
   m_TagString: Untagged
@@ -2051,6 +2034,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7523210379262173216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546975901424986385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437277b74dcd28b45b988940cdd91a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 8546975900741815599}
+  speed: {fileID: 8546975900452396488}
+  stamina: {fileID: 8546975899838882580}
+  attack: {fileID: 8546975899956972046}
+  armor: {fileID: 8546975900156044010}
+  power: {fileID: 8546975900016902921}
 --- !u!1 &8546975901688485387
 GameObject:
   m_ObjectHideFlags: 0
