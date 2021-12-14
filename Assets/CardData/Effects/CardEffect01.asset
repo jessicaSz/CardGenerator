@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2fd55b649276c47a20447c35e8396f, type: 3}
   m_Name: CardEffect01
   m_EditorClassIdentifier: 
-  effectDescription: 
-  effectValue: 0
+  effectDescription: 'Lose HP: '
+  effectValue: -20
   effectType: 0

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d99584090265445ac3feacdefabd27, type: 3}
   m_Name: CardDescription02
   m_EditorClassIdentifier: 
-  description: 
+  description: You should be aware of your weakness.
