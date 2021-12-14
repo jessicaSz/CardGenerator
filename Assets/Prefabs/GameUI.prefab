@@ -1242,6 +1242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8546975900518795034}
   - component: {fileID: 8546975900518795035}
+  - component: {fileID: 8341772313831546803}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -1300,6 +1301,24 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8341772313831546803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546975900518795033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437277b74dcd28b45b988940cdd91a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 8546975900741815599}
+  speed: {fileID: 8546975900452396488}
+  stamina: {fileID: 8546975899838882580}
+  attack: {fileID: 8546975899956972046}
+  armor: {fileID: 8546975900156044010}
+  power: {fileID: 8546975900016902921}
 --- !u!1 &8546975900741815597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +1733,7 @@ GameObject:
   - component: {fileID: 8546975901036588443}
   - component: {fileID: 8546975901036588442}
   - component: {fileID: 8546975901036588441}
+  - component: {fileID: 8068826151596819550}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -1805,6 +1825,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8068826151596819550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546975901036588440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a94faa80c651d459d05606c4161cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generateButton: {fileID: 8546975900510249931}
+  saveButton: {fileID: 8546975900250115183}
+  useButton: {fileID: 8546975900232629217}
 --- !u!1 &8546975901194691519
 GameObject:
   m_ObjectHideFlags: 0
